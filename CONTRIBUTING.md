@@ -29,4 +29,4 @@ Update `COMPATIBILITY.md` with the exact scope and evidence. Only classify a pri
 
 ## Releases
 
-Debug APKs are for testing. Public releases need a deliberately chosen application ID, a stable release signing key held outside the repository/CI artifacts, current Android/Google Play compliance checks, a published privacy policy, and matching tagged corresponding source. Never commit a keystore or its password. This milestone does not generate a production key or publish an app.
+GitHub development prereleases are published as Paper by Avyntora. Debug APKs are for testing. Production/store releases need a deliberately chosen application ID, a stable release signing key held outside the repository/CI artifacts, current Android/Google Play compliance checks, a published privacy policy, and matching tagged corresponding source. Never commit a keystore or its password. Production signing and store publication are separate from the GitHub development release.

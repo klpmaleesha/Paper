@@ -1,5 +1,7 @@
 # Paper by Avyntora
 
+[![Android checks](https://github.com/klpmaleesha/Paper/actions/workflows/android.yml/badge.svg)](https://github.com/klpmaleesha/Paper/actions/workflows/android.yml)
+
 **Paper is a product of Avyntora.** Free and open-source printing for Android: print PDFs, photos and text through USB OTG or compatible IPP/IPPS network printers. No ads, accounts or analytics.
 
 [Download the development APK](https://github.com/klpmaleesha/Paper/releases/tag/v0.3.0) · [Printer compatibility](COMPATIBILITY.md) · [Privacy](PRIVACY.md) · [Contributing](CONTRIBUTING.md)

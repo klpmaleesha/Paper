@@ -4,14 +4,14 @@
 
 Capability/compatibility models; saved presets; manual duplex setup; local PDF-over-IPP discovery and print-service integration; single-submission protection; source-based native builds; protocol/loopback tests and visual review renders.
 
-These implementations are experimental until exercised on phones and physical printers. Configuring CI is not proof that a hosted CI run has passed.
+These implementations are experimental until exercised on phones and physical printers. The clean native source build, automated tests and visual renders have now passed on GitHub Actions; see `VERIFICATION.md`.
 
 ## Before a public beta
 
 - Complete the G2010 feature matrix using `COMPATIBILITY.md`; basic printing was user-confirmed in 0.2.0. Capture reproducible evidence for each supported mode; resolve failures rather than relabelling them as verified.
 - Test IPP and IPPS on real printers from more than one manufacturer, with Android 8/current Android and different phone vendors. Exercise discovery, service enable/disable, print-menu page ranges, copies, automatic duplex, status, TLS, cancellation, backgrounding and process interruption.
 - Validate saved presets, reload guidance, TalkBack, large text and dialog behaviour on a device. The host renderer can inspect screen/sheet content but cannot verify Android's separate dialog windows or lifecycle.
-- Run the new standard CMake/NDK build and CI workflow on a clean Linux runner. Verify APK native-library alignment on 16 KB-page devices; benchmark CPU, memory and storage.
+- The standard CMake/NDK build now passes on a clean Linux runner. Validate runtime behaviour on 16 KB-page devices and benchmark CPU, memory and storage.
 - Choose the final application ID and release signing arrangement. Complete current store/distribution requirements and publish matching source and privacy policy. Keep signing keys out of source and test artifacts.
 
 ## Further printer support
