@@ -1,0 +1,13 @@
+import {readFile,writeFile,mkdir,stat} from 'node:fs/promises';
+import {existsSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {spawn} from 'node:child_process';
+const root=resolve(import.meta.dirname,'..'),ndk=join(root,'.tooling/ndk'),source=join(root,'native/gutenprint');
+const files=JSON.parse(await readFile(join(source,'sources.json'),'utf8')).map(x=>join(source,x));files.push(join(root,'native/paper_canon.c'));
+const outDir=join(root,'app/src/main/jniLibs/arm64-v8a');await mkdir(outDir,{recursive:true});
+const out=join(outDir,'libpaper_canon.so');
+const args=['--target=aarch64-linux-android26','--sysroot='+join(ndk,'sysroot'),'-shared','-fPIC','-O2','-g0','-fvisibility=hidden','-DHAVE_CONFIG_H=1','-D_GNU_SOURCE','-I'+source,'-I'+join(source,'include'),'-I'+join(source,'src'),...files,'-lm','-Wl,--no-undefined','-Wl,-z,max-page-size=16384','-Wl,-z,common-page-size=16384','-o',out];
+const response=join(root,'.tooling/native-args.txt');await writeFile(response,args.map(x=>'"'+x.replaceAll('\\','/')+'"').join('\n'));
+console.log('Compiling the Canon raster encoder for Android arm64.');
+const code=await new Promise((ok,no)=>{const p=spawn(join(ndk,'bin/clang.exe'),['@'+response],{cwd:root,stdio:'inherit'});p.on('exit',ok);p.on('error',no)});
+if(code!==0)process.exitCode=code??1;else console.log('Native Canon raster encoder built:',(await stat(out)).size,'bytes');

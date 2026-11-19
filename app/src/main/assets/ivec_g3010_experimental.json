@@ -1,0 +1,568 @@
+{
+  "source": "cnijfilter2 6.81 capability data",
+  "models": [
+    {
+      "id": "canong3010",
+      "model": "G3010 series",
+      "nickname": "Canon G3010 series",
+      "device_id": "MFG:Canon;CMD:BJRaster3,NCCe,IVEC;SOJ:CHMP;MDL:G3010 series;CLS:PRINTER;DES:Canon G3010 series;VER:1.020;STA:10;CID:CA_IVEC1TYPE4_IJP;",
+      "protocol": 2,
+      "datetime": true,
+      "mono_only": false,
+      "default_gray": false,
+      "color": true,
+      "duplex": false,
+      "optimization": false,
+      "resolution": 600,
+      "default_size": "A4",
+      "default_media": "plain",
+      "quality": {
+        "levels": [
+          "auto",
+          "best",
+          "normal",
+          "fast_draft"
+        ],
+        "draft_res": 300,
+        "draft_media": [
+          "stationery"
+        ]
+      },
+      "maint_style": "ivec",
+      "maint_datetime": true,
+      "maint_hostenv": true,
+      "maint": {
+        "Cleaning": {
+          "regular": [
+            "all",
+            "group1",
+            "group2"
+          ],
+          "deep": [
+            "all",
+            "group1"
+          ],
+          "choke": [
+            "all",
+            "group1",
+            "group2"
+          ]
+        },
+        "RollerCleaning": {
+          "roller": [],
+          "platen": []
+        },
+        "TestPrint": {
+          "nozzle_check": [],
+          "manual_registration": [],
+          "half_auto_registration": [],
+          "regi_check": []
+        }
+      },
+      "sizes": [
+        {
+          "name": "Letter",
+          "text": "Letter [8.50\"x11.00\" 215.9x279.4mm]",
+          "w": 612,
+          "h": 792,
+          "ia": [
+            18.14,
+            14.18,
+            594.14,
+            783.5
+          ],
+          "print": [
+            4800,
+            6411
+          ],
+          "pwg": "na_letter_8.5x11in"
+        },
+        {
+          "name": "Letter.bl",
+          "text": "Letter(borderless) [8.50\"x11.00\" 215.9x279.4mm]",
+          "w": 612,
+          "h": 792,
+          "ia": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "print": [
+            5232,
+            6765
+          ],
+          "pwg": "na_letter_8.5x11in",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "legal",
+          "text": "Legal [8.50\"x14.00\" 215.9x355.6mm]",
+          "w": 612,
+          "h": 1008,
+          "ia": [
+            18.14,
+            14.18,
+            594.14,
+            999.5
+          ],
+          "print": [
+            4800,
+            8211
+          ],
+          "pwg": "na_legal_8.5x14in"
+        },
+        {
+          "name": "A5",
+          "text": "A5 [5.83\"x8.27\" 148.0x210.0mm]",
+          "w": 420,
+          "h": 595,
+          "ia": [
+            9.64,
+            13.98,
+            409.84,
+            586.5
+          ],
+          "print": [
+            3335,
+            4771
+          ],
+          "pwg": "iso_a5_148x210mm"
+        },
+        {
+          "name": "A4",
+          "text": "A4 [8.27\"x11.69\" 210.0x297.0mm]",
+          "w": 595,
+          "h": 842,
+          "ia": [
+            9.64,
+            14.38,
+            585.64,
+            833.5
+          ],
+          "print": [
+            4800,
+            6826
+          ],
+          "pwg": "iso_a4_210x297mm"
+        },
+        {
+          "name": "A4.bl",
+          "text": "A4(borderless) [8.27\"x11.69\" 210.0x297.0mm]",
+          "w": 595,
+          "h": 842,
+          "ia": [
+            0,
+            0,
+            595,
+            842
+          ],
+          "print": [
+            5092,
+            7181
+          ],
+          "pwg": "iso_a4_210x297mm",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "B5",
+          "text": "B5 [7.17\"x10.12\" 182.0x257.0mm]",
+          "w": 516,
+          "h": 729,
+          "ia": [
+            9.64,
+            14.78,
+            506.2,
+            720.5
+          ],
+          "print": [
+            4138,
+            5881
+          ],
+          "pwg": "jis_b5_182x257mm"
+        },
+        {
+          "name": "4x6",
+          "text": "4\"x6\" [4.00\"x6.00\" 101.6x152.4mm]",
+          "w": 288,
+          "h": 432,
+          "ia": [
+            9.64,
+            14.18,
+            278.32,
+            423.5
+          ],
+          "print": [
+            2239,
+            3411
+          ],
+          "pwg": "na_index-4x6_4x6in"
+        },
+        {
+          "name": "4x6.bl",
+          "text": "4\"x6\"(borderless) [4.00\"x6.00\" 101.6x152.4mm]",
+          "w": 288,
+          "h": 432,
+          "ia": [
+            0,
+            0,
+            288,
+            432
+          ],
+          "print": [
+            2532,
+            3765
+          ],
+          "pwg": "na_index-4x6_4x6in",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "5x7in",
+          "text": "5\"x7\" [5.00\"x7.00\" 127.0x177.8mm]",
+          "w": 360,
+          "h": 504,
+          "ia": [
+            9.64,
+            14.18,
+            350.32,
+            495.5
+          ],
+          "print": [
+            2839,
+            4011
+          ],
+          "pwg": "na_5x7_5x7in"
+        },
+        {
+          "name": "5x7in.bl",
+          "text": "5\"x7\"(borderless) [5.00\"x7.00\" 127.0x177.8mm]",
+          "w": 360,
+          "h": 504,
+          "ia": [
+            0,
+            0,
+            360,
+            504
+          ],
+          "print": [
+            3132,
+            4365
+          ],
+          "pwg": "na_5x7_5x7in",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "8x10",
+          "text": "8\"x10\" [8.00\"x10.00\" 203.2x254.0mm]",
+          "w": 576,
+          "h": 720,
+          "ia": [
+            9.64,
+            14.18,
+            566.32,
+            711.5
+          ],
+          "print": [
+            4639,
+            5811
+          ],
+          "pwg": "custom_canon_203x254mm"
+        },
+        {
+          "name": "8x10.bl",
+          "text": "8\"x10\"(borderless) [8.00\"x10.00\" 203.2x254.0mm]",
+          "w": 576,
+          "h": 720,
+          "ia": [
+            0,
+            0,
+            576,
+            720
+          ],
+          "print": [
+            4932,
+            6165
+          ],
+          "pwg": "custom_canon_203x254mm",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "l",
+          "text": "L [3.50\"x5.00\" 89.0x127.0mm]",
+          "w": 252,
+          "h": 360,
+          "ia": [
+            9.64,
+            14.18,
+            242.56,
+            351.5
+          ],
+          "print": [
+            1941,
+            2811
+          ],
+          "pwg": "custom_canon_89x127mm"
+        },
+        {
+          "name": "l.bl",
+          "text": "L(borderless) [3.50\"x5.00\" 89.0x127.0mm]",
+          "w": 252,
+          "h": 360,
+          "ia": [
+            0,
+            0,
+            252,
+            360
+          ],
+          "print": [
+            2234,
+            3165
+          ],
+          "pwg": "custom_canon_89x127mm",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "Postcard",
+          "text": "Hagaki [3.94\"x5.83\" 100.0x148.0mm]",
+          "w": 283,
+          "h": 420,
+          "ia": [
+            9.64,
+            14.66,
+            273.76,
+            411.5
+          ],
+          "print": [
+            2201,
+            3307
+          ],
+          "pwg": "jpn_hagaki_100x148mm"
+        },
+        {
+          "name": "Postcard.bl",
+          "text": "Hagaki(borderless) [3.94\"x5.83\" 100.0x148.0mm]",
+          "w": 283,
+          "h": 420,
+          "ia": [
+            0,
+            0,
+            283,
+            420
+          ],
+          "print": [
+            2494,
+            3661
+          ],
+          "pwg": "jpn_hagaki_100x148mm",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "envelop10p",
+          "text": "Envelope Com 10 [4.12\"x9.50\" 104.8x241.3mm]",
+          "w": 297,
+          "h": 684,
+          "ia": [
+            9.64,
+            82.32,
+            287.32,
+            661.32
+          ],
+          "print": [
+            2314,
+            4825
+          ],
+          "pwg": "na_number-10_4.125x9.5in"
+        },
+        {
+          "name": "envelopdlp",
+          "text": "Envelope DL [4.33\"x8.66\" 110.0x220.0mm]",
+          "w": 312,
+          "h": 624,
+          "ia": [
+            9.64,
+            82.68,
+            302.08,
+            601.32
+          ],
+          "print": [
+            2437,
+            4322
+          ],
+          "pwg": "iso_dl_110x220mm"
+        },
+        {
+          "name": "businesscard",
+          "text": "Card [2.17\"x3.58\" 55.0x91.0mm]",
+          "w": 156,
+          "h": 258,
+          "ia": [
+            9.64,
+            14.3,
+            146.2,
+            249.5
+          ],
+          "print": [
+            1138,
+            1960
+          ],
+          "pwg": "custom_canon_55x91mm"
+        },
+        {
+          "name": "businesscard.bl",
+          "text": "Card(borderless) [2.17\"x3.58\" 55.0x91.0mm]",
+          "w": 156,
+          "h": 258,
+          "ia": [
+            0,
+            0,
+            156,
+            258
+          ],
+          "print": [
+            1431,
+            2314
+          ],
+          "pwg": "custom_canon_55x91mm",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        },
+        {
+          "name": "square127",
+          "text": "Square [5.00\"x5.00\" 127.0x127.0mm]",
+          "w": 360,
+          "h": 360,
+          "ia": [
+            17.01,
+            17.07,
+            342.93,
+            342.99
+          ],
+          "print": [
+            2716,
+            2716
+          ],
+          "pwg": "custom_canon_127x127mm"
+        },
+        {
+          "name": "square127.bl",
+          "text": "Square(borderless) [5.00\"x5.00\" 127.0x127.0mm]",
+          "w": 360,
+          "h": 360,
+          "ia": [
+            0,
+            0,
+            360,
+            360
+          ],
+          "print": [
+            3132,
+            3165
+          ],
+          "pwg": "custom_canon_127x127mm",
+          "overhang": [
+            200,
+            280,
+            500,
+            280
+          ]
+        }
+      ],
+      "media": [
+        {
+          "name": "plain",
+          "text": "Plain Paper",
+          "ivec": "stationery"
+        },
+        {
+          "name": "glossygold",
+          "text": "Photo Paper Plus Glossy II",
+          "ivec": "custom-media-type-canon-3"
+        },
+        {
+          "name": "luster",
+          "text": "Photo Paper Pro Luster",
+          "ivec": "custom-media-type-canon-17"
+        },
+        {
+          "name": "semigloss",
+          "text": "Photo Paper Plus Semi-gloss",
+          "ivec": "custom-media-type-canon-6"
+        },
+        {
+          "name": "glossypaper",
+          "text": "Glossy Photo Paper",
+          "ivec": "custom-media-type-canon-14"
+        },
+        {
+          "name": "matte",
+          "text": "Matte Photo Paper",
+          "ivec": "custom-media-type-canon-15"
+        },
+        {
+          "name": "photopaper",
+          "text": "Photo Paper",
+          "ivec": "photographic"
+        },
+        {
+          "name": "envelope",
+          "text": "Envelope",
+          "ivec": "custom-media-type-canon-18"
+        },
+        {
+          "name": "ijpostcard",
+          "text": "Ink Jet Hagaki",
+          "ivec": "custom-media-type-canon-11"
+        },
+        {
+          "name": "postcard",
+          "text": "Hagaki",
+          "ivec": "custom-media-type-canon-12"
+        },
+        {
+          "name": "highres",
+          "text": "High Resolution Paper",
+          "ivec": "custom-media-type-canon-9"
+        }
+      ]
+    }
+  ]
+}

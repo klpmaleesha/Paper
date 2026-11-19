@@ -1,0 +1,15 @@
+import {mkdir,writeFile} from 'node:fs/promises';
+import {spawn} from 'node:child_process';
+import {resolve,join} from 'node:path';
+const root=resolve(import.meta.dirname,'..'),dir=join(root,'driver-research');
+await mkdir(dir,{recursive:true});
+const repo='noble6/canon-universal-driver';
+const r=await fetch('https://api.github.com/repos/'+repo+'/commits/main');if(!r.ok)throw Error('GitHub '+r.status);
+const info=await r.json();const sha=info.sha;
+if(!/^[a-f0-9]{40}$/.test(sha))throw Error('Invalid source revision');
+const url='https://codeload.github.com/'+repo+'/tar.gz/'+sha;
+const source=await fetch(url);if(!source.ok)throw Error('Source download '+source.status);
+await writeFile(join(dir,'upstream.tar.gz'),Buffer.from(await source.arrayBuffer()));
+await writeFile(join(dir,'source.json'),JSON.stringify({repository:'https://github.com/'+repo,revision:sha,retrieved:new Date().toISOString()},null,2));
+await new Promise((ok,no)=>{const p=spawn('tar.exe',['-xf',join(dir,'upstream.tar.gz'),'-C',dir],{stdio:'inherit'});p.on('exit',c=>c===0?ok():no(Error('Extraction failed')));p.on('error',no)});
+console.log('Pinned driver research source:',sha);

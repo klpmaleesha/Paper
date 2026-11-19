@@ -1,0 +1,36 @@
+name: Printer compatibility report
+description: Report the exact printer, connection and tested features. Never upload private documents.
+body:
+  - type: input
+    id: printer
+    attributes:
+      label: Exact printer model
+      placeholder: Canon PIXMA G2010
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Paper version, phone model and Android version
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection
+      options:
+        - USB OTG
+        - IPP over local network
+        - IPPS over local network
+  - type: textarea
+    id: result
+    attributes:
+      label: What physically printed, and which settings were used?
+      description: Include colour, paper, page count, sides, and whether cancellation worked. Sending bytes alone is not a successful print test.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Optional diagnostic report
+      description: Review and remove personal information before sharing. Do not include documents, passwords, serial numbers or public printer addresses.

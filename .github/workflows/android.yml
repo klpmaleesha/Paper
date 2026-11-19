@@ -1,0 +1,38 @@
+name: Android checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Install pinned native toolchain
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0' 'ndk;27.2.12479018' 'cmake;3.22.1'
+      - name: Build from source and run Android checks
+        run: bash gradlew compileDebugUnitTestKotlin assembleDebug lintDebug --console=plain
+      - name: Run protocol and planning tests
+        run: node tools/test-protocol.mjs
+      - name: Render Compose screens for review
+        run: bash gradlew recordPaparazziDebug --console=plain
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: paper-development-build
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/reports/lint-results-debug.html
+            .tooling/protocol-test-result.txt
+            app/src/test/snapshots/images/*.png

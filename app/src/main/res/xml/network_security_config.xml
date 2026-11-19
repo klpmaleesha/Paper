@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IPP-only LAN printers may use cleartext HTTP. IPPS uses Android's default certificate validation. -->
+<network-security-config><base-config cleartextTrafficPermitted="true" /></network-security-config>
