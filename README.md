@@ -1,10 +1,10 @@
-# Paper
+# Paper by Avyntora
 
-Free and open-source printing for Android. Print PDFs, photos and text through USB OTG or compatible IPP/IPPS network printers. No ads, accounts or analytics.
+**Paper is a product of Avyntora.** Free and open-source printing for Android: print PDFs, photos and text through USB OTG or compatible IPP/IPPS network printers. No ads, accounts or analytics.
 
 [Download the development APK](https://github.com/klpmaleesha/Paper/releases/tag/v0.3.0) · [Printer compatibility](COMPATIBILITY.md) · [Privacy](PRIVACY.md) · [Contributing](CONTRIBUTING.md)
 
-Native Kotlin and Jetpack Compose, with a one-handed interface influenced by Samsung's published One UI principles. An independent project, not affiliated with Samsung or Canon.
+Native Kotlin and Jetpack Compose, with a one-handed interface influenced by Samsung's published One UI principles. Paper and Avyntora are not affiliated with Samsung or Canon.
 
 ## Interface
 

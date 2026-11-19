@@ -180,7 +180,7 @@ private val PageShape=RoundedCornerShape(26.dp)
                 }}
             }){padding->
                 Column(Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).statusBarsPadding().padding(horizontal=18.dp).widthIn(max=600.dp)){
-                    Row(Modifier.fillMaxWidth().padding(start=6.dp,top=12.dp),verticalAlignment=Alignment.CenterVertically){PaperLogo(31);Text("Paper",fontSize=19.sp,fontWeight=FontWeight.SemiBold,modifier=Modifier.padding(start=10.dp).weight(1f));IconButton(onClick=theme){Icon(Icons.Rounded.Contrast,"Change appearance",Modifier.size(22.dp))};IconButton(onClick={sheet="help"}){Icon(Icons.Rounded.HelpOutline,"Printing help",Modifier.size(22.dp))}}
+                    Row(Modifier.fillMaxWidth().padding(start=6.dp,top=12.dp),verticalAlignment=Alignment.CenterVertically){PaperLogo(31);Column(Modifier.padding(start=10.dp).weight(1f)){Text("Paper",fontSize=19.sp,fontWeight=FontWeight.SemiBold);Text("by Avyntora",fontSize=11.sp,lineHeight=15.sp,color=ink)};IconButton(onClick=theme){Icon(Icons.Rounded.Contrast,"Change appearance",Modifier.size(22.dp))};IconButton(onClick={sheet="help"}){Icon(Icons.Rounded.HelpOutline,"Printing help",Modifier.size(22.dp))}}
                     Column(Modifier.fillMaxWidth().padding(top=40.dp,bottom=37.dp),horizontalAlignment=Alignment.CenterHorizontally){
                         Text("Print",fontSize=40.sp,fontWeight=FontWeight.SemiBold,letterSpacing=(-1).sp,lineHeight=48.sp)
                         Text("From your phone. Onto paper.",fontSize=15.sp,color=ink,modifier=Modifier.padding(top=8.dp))
@@ -298,7 +298,7 @@ private val PageShape=RoundedCornerShape(26.dp)
         Text("Printing on both sides",fontSize=18.sp,fontWeight=FontWeight.SemiBold);Text("The G2010 turns paper manually. Paper prepares the front sides first, then guides you through reloading for the backs. Choose long edge for a book, or short edge for a notepad.",fontSize=14.sp,lineHeight=23.sp)
         Text("Start with a two-page test",fontSize=18.sp,fontWeight=FontWeight.SemiBold);Text("Paper feed and stack order vary. Mark a sheet’s top edge, print two pages, and check the back is upright. Change back-side order in More settings if needed. Let the ink dry before reloading.",fontSize=14.sp,lineHeight=23.sp)
         Text("Files stay private",fontSize=18.sp,fontWeight=FontWeight.SemiBold);Text("No ads, accounts or analytics. Network access connects to the printer you choose. PDFs, images, and plain text are supported. Export office files to PDF before opening them here.",fontSize=14.sp,lineHeight=23.sp)
-        Text("About Paper",fontSize=18.sp,fontWeight=FontWeight.SemiBold);Text("An independent app guided by Samsung’s published One UI design principles. Not affiliated with Samsung or Canon. Version 0.3.0.",fontSize=13.sp,lineHeight=21.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
+        Text("About Paper",fontSize=18.sp,fontWeight=FontWeight.SemiBold);Text("Paper is a product of Avyntora, guided by Samsung’s published One UI design principles. Free and open source under GPL-3.0-or-later. Not affiliated with Samsung or Canon. Version 0.3.0.",fontSize=13.sp,lineHeight=21.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
     }}
 }
 fun previewState()=PaperState(document=LocalDocument(File("sample.pdf"),"A little more clarity.pdf",4,184320),previewCount=4,settings=PrintSettings(sides=Sides.LONG))

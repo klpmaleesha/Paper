@@ -1,5 +1,7 @@
 # Privacy
 
+Paper is an Avyntora product. This policy describes the Paper Android app.
+
 Paper has no advertising, accounts, subscriptions, analytics SDKs, automatic crash uploads, or cloud document conversion.
 
 Documents are imported and prepared in app-private storage. USB output goes to the selected, authorised printer. Network output goes directly to the printer selected in Android's Print menu. Printing necessarily shares the document with that printer and its operator; a print server may keep its own history.

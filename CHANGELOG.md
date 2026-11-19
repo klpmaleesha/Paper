@@ -2,6 +2,7 @@
 
 ## 0.3.0 — Multi-printer development milestone
 
+- Released as Paper by Avyntora, with product attribution in the app and project documentation.
 - Introduces capability and compatibility models; no printer is presented as physically verified without evidence.
 - Adds saved print presets, four built-in starting points, and up to twenty custom presets. Page selection and copy count are not stored in a preset. Fixes photo-paper preference persistence.
 - Adds a four-page/two-sheet manual duplex setup document and locally saved reload instructions for the G2010 with A4 portrait, long-edge binding.
